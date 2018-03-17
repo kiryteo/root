@@ -83,9 +83,6 @@ install:
 script:
 - mkdir builds && cd builds
 - cmake ..
-- ninja test
-- ninja build
-- ninja install
 - echo "Copying and generating header files." && echo -en "travis_fold:start:install.headers"
 - |
   # We need to put in place all relevant headers before running clang-tidy.
@@ -174,3 +171,12 @@ on_failure:
   -|
   echo "Showing current directory contents"
   ls -la
+
+test:
+- ninja test
+
+build:
+- ninja build
+
+install:
+- ninja install
