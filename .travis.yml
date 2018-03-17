@@ -81,8 +81,6 @@ install:
     fi
 
 script:
-- mkdir ../builds
-- cd ../builds
 - cmake ..
 - echo "Copying and generating header files." && echo -en "travis_fold:start:install.headers"
 - |
