@@ -172,11 +172,11 @@ on_failure:
   echo "Showing current directory contents"
   ls -la
 
-test:
-- ninja test
+after_install:
+  test:
+  - ninja test
 
-build:
-- ninja build
+  build:
+  - ninja build
 
-install:
 - ninja install
