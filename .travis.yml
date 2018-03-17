@@ -83,7 +83,7 @@ install:
     fi
 
 script:
-- cmake
+- cmake ..
 - make test
 - make build
 - make install
