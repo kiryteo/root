@@ -81,6 +81,7 @@ install:
     fi
 
 script:
+  - mkdir builds && cd builds
   - cmake ..
   - ninja test
   - ninja build
